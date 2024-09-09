@@ -1,0 +1,33 @@
+.maindivnamesection{
+margin: 0% auto;
+width: 50%;
+background-color: aqua;
+}
+.lblname{
+    text-align: left;
+}
+
+#divnameallign{
+    padding-left: 25%;
+}
+
+#nameinputtxt{
+    margin-left: 15%;
+}
+#nameinputtxt2{
+    margin-left: 55px;
+}
+
+#inpfullname{
+    margin-left: 75px;
+}
+
+#divdetailscontry{
+    padding-left: 25%;
+}
+#pkcountryselect{
+    margin-left: 40px;
+}
+#proviceselectdiv{
+    margin-left: 48px;
+}

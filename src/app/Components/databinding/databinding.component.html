@@ -1,0 +1,47 @@
+<p>databinding works!</p>
+
+<div>
+    <h1>One way Data Binding</h1>
+    <div>
+        <h1>Interpolation</h1>
+        <H3>{{CourseName}}</H3>
+    </div>
+    <div>
+        <h3>{{RollNumber}}</h3>
+    </div>
+    <div>
+        <h3>{{iseligible}}</h3>
+    </div>
+    <input type="{{inputType}}" placeholder="Type here">
+    <input type="text" value="{{CourseName}}" placeholder="Type here">
+</div>
+
+<div>
+    <h1>Property Binding</h1>
+    <div>
+        <input [type]="inputType" placeholder="Check out" id="">
+
+    </div>
+    <div [class]="CourseName">
+        <h1>here also use background color for class</h1>
+    </div>
+    <div>
+        <input type="text" [value]="RollNumber">
+    </div>
+</div>
+<div>
+    <button type="text" (click)="btnclick('Welcome To Angular 18')"> Show WellCome </button>
+    <br/><br/>
+    <span (click)="btnclick('This is span click')">Click here</span>
+    <br/>
+    <br/>
+    <button (click)="chngeCourse()">Change Course</button>
+</div>
+<br/><br/>
+<div>
+    <input type="text" [(ngModel)]="CourseName">
+    <h1>{{Firstname()}}</h1>
+    <br>
+    <br>
+<button (click)="chngename()" (dblclick)="dblchangename()">Click for Change Name</button>
+</div>

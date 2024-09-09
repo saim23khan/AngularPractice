@@ -1,0 +1,72 @@
+<h1>Add Info Detail:</h1>
+
+<div class="maindivnamesection">
+  
+  <div id="divname">
+    <h1>Name Section:</h1>
+  </div>
+  <div id="divnameallign">
+  <div>
+     <label class="lblname" id="firstname" [(ngModel)]="firstname" >First Name:</label> 
+     <input id="nameinputtxt" type="text" placeholder="Enter Your First Name">
+  </div>
+  <div>
+    <label class="lblname" id="middlename" [(ngModel)]="middlename" >Middle Name:</label> 
+    <input id="nameinputtxt2" type="text" placeholder="Enter Your Mid Name">
+  </div>
+  <div>
+    <label class="lblname" id="thirdname" [(ngModel)]="thirdname" >Last Name:</label> 
+    <input id="nameinputtxt" type="text" placeholder="Enter Your Last Name">
+  </div>  
+</div>
+<div id="divname">
+  <h1>Details of Place:</h1>
+</div>
+<div id="divdetailscontry">
+<div>
+  <label for="selectcountry">Select Country:</label>
+  <select name="Countryselect" id="pkcountryselect" (click)="btncountryclick($event)">
+    <option value="select">select</option>
+    <option value="pk">Pakistan</option>
+    <option value="ind">India</option>
+    <option value="uae">UAE</option>    
+    <option value="bd">BanglaDesh</option>
+  </select>
+</div>
+<div *ngIf="proviceselect">
+  <label for="provice">Select provice</label>
+  <select *ngIf="pkprovice" name="provice" id="proviceselectdiv">
+    <option value="select">select</option>
+    <option value="si">Sindh</option>
+    <option value="pj">Panjab</option>
+    <option value="kp">Khyber Pakhtoonkha</option>
+    <option value="bl">Balochistan</option>    
+  </select>
+  <select *ngIf="indprovice" name="provice" id="proviceselectdiv">
+    <option value="select">select</option>
+    <option value="dl">Dehli</option>
+    <option value="pb">Panjab</option>
+    <option value="bb">Bombay</option>
+    <option value="kk">kolkata</option>    
+  </select>
+  <select *ngIf="uaeprovice" name="provice" id="proviceselectdiv">
+    <option value="select">select</option>
+    <option value="dh">Dhabi</option>
+    <option value="du">Dubai</option>
+    <option value="sh">Sharjah</option>
+    <option value="aj">Ajman</option>    
+  </select>
+  <select *ngIf="banprovice" name="provice" id="proviceselectdiv">
+    <option value="select">select</option>
+    <option value="dk">Dhaka</option>
+    <option value="ch">Chittagong</option>
+    <option value="kh">Khulna</option>
+    <option value="ra">Rajshahi</option>    
+  </select>
+</div>
+<div>  
+  <label for="phonenumber">Phone NO:</label>
+  <!-- <label for="countrycode" *ngIf="countrydiv" ></label> -->
+  <input type="number" id="nameinputtxt" placeholder="{{countrycodelabel}}">
+</div>
+</div>
