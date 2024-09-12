@@ -21,6 +21,9 @@ export class IforforeachComponent {
   indprovice: boolean = false;
   uaeprovice: boolean = false;
   banprovice: boolean = false;
+  
+  relegionoption : string[] = ['select','Islam','Christianity','Hindusm','Other'] ;
+
 
   btncountryclick(event: any) {
     const selectedValue = event.target.value;
@@ -69,3 +72,8 @@ export class IforforeachComponent {
   }
 
 }
+
+export class IforforeachComponentfor {
+
+  
+} 
