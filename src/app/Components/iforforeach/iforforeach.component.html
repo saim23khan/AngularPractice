@@ -74,10 +74,43 @@
   <select id="proviceselectdiv">
     <option  *ngFor="let rele of relegionoption">{{ rele }}</option>
   </select>
-</div>
-<h1>test</h1>
+  <label for="">Branch :</label>
+  <select  id="branchcode">
+    <option *ngFor="let bran of branchlist" [value]="bran.Id">{{bran.LocationArea}}</option>
+  </select>
 </div>
 
 </div>
+<br>
+<div class="row"></div>
+  <div class="col-12">
+    <table class="table table-bordered">
+      <thead>
+          <tr>
+            <th>S No</th>
+            <th>Student Name</th>
+            <th>Shift</th>
+            <th>Batch</th>
+            <th>Status</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stdname of studlist;let srNo = index">
+          <td>{{srNo +1}}</td>
+          <td>{{stdname.Named}}</td>
+          <td>{{stdname.shift}}</td>
+          <td>{{stdname.batch}}</td>
+          <td>
+            <span *ngIf="stdname.Avtive">Eligible</span>
+            <span *ngIf="!stdname.Avtive">Not Eligible</span>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
 
 

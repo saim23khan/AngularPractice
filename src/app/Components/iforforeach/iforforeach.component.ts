@@ -24,6 +24,22 @@ export class IforforeachComponent {
   
   relegionoption : string[] = ['select','Islam','Christianity','Hindusm','Other'] ;
 
+  branchlist : any[] = [
+    {Id:11, ContryCode:'pk', LocationArea:'Karachi', IsAvtive: true} ,
+    {Id:22, ContryCode:'ind', LocationArea:'Mumbai', IsAvtive: true} ,
+    {Id:33, ContryCode:'uae', LocationArea:'Dubai', IsAvtive: true} ,
+    {Id:44, ContryCode:'bd', LocationArea:'Dhaka', IsAvtive: true}    
+  ];
+ 
+  studlist : any[] = [
+    {Id:11, Named:'Saim Khan', shift:'Morning', batch:'241224F', Avtive: true} ,
+    {Id:112, Named:'Faraz Shahab', shift:'Evening',batch:'241225G', Avtive: true} ,
+    {Id:113, Named:'Asad Ali', shift:'Afternoon',batch:'241225G', Avtive: false} ,
+    {Id:114, Named:'Waqar Khan', shift:'Afternoon',batch:'241224F', Avtive: true} ,
+    {Id:115, Named:'Sheikh Umer', shift:'morning',batch:'241226A', Avtive: true} ,
+    {Id:116, Named:'Taha Siddiqui', shift:'Evening',batch:'241224F', Avtive: false} ,
+    {Id:117, Named:'Faiq Khan', shift:'morning',batch:'241226A', Avtive: true} 
+  ]
 
   btncountryclick(event: any) {
     const selectedValue = event.target.value;
@@ -68,6 +84,7 @@ export class IforforeachComponent {
       this.uaeprovice = false;
       this.pkprovice = false;
       this.banprovice = true;
+      
     }
   }
 
