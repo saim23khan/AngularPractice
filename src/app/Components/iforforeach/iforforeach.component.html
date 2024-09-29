@@ -79,12 +79,11 @@
     <option *ngFor="let bran of branchlist" [value]="bran.Id">{{bran.LocationArea}}</option>
   </select>
 </div>
-
 </div>
 <br>
-<div class="row"></div>
-  <div class="col-12">
-    <table class="table table-bordered">
+<div style="width: 100%;">
+  <button (click)="stddetailshow($event)" (dblclick)="stddetailnotshow($event)">Show Details</button>
+     <table *ngIf="showdetailbtn" class="table table-bordered">
       <thead>
           <tr>
             <th>S No</th>
@@ -109,6 +108,40 @@
     </table>
   </div>
 
+  <div style="width: 100%;">
+   <button (click)="marksreportshow($event)" (dblclick)="marksreportnotshow($event)">Show Result</button>
+   <table *ngIf="showbtn" class="table table-bordered">
+       <thead>
+        <tr>
+        <th>Roll No</th>
+        <th>Student Name</th>
+        <th>Shifts</th>
+        <th>Math</th>
+        <th>Physics</th>
+        <th>Chemistry</th>
+        <th>Computer</th>
+        <th>Obtain Marks</th>
+        <th>Total Number</th>
+        <th>Percentage</th>
+      </tr>
+       </thead>
+       <tbody>
+        <tr *ngFor="let stdmarks of marklist">
+          <td>{{stdmarks.rollno}}</td>
+          <td>{{stdmarks.Named}}</td>
+          <td>{{stdmarks.shift}}</td>
+          <td>{{stdmarks.Math}}</td>
+          <td>{{stdmarks.Physics}}</td>
+          <td>{{stdmarks.Chemistry}}</td>
+          <td>{{stdmarks.Computer}}</td>
+          <td>{{stdmarks.ObtainNumber}}</td>
+          <td>{{stdmarks.Totalmarks}}</td>
+          <td [ngStyle]="{'background-color': getbackgroundcolor(stdmarks.Percentage)}">
+            {{stdmarks.Percentage}}</td>
+        </tr>
+       </tbody>
+   </table>
+  </div>
 </div>
 
 
