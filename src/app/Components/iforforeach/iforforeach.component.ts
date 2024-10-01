@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-iforforeach',
@@ -53,6 +54,13 @@ export class IforforeachComponent {
     {rollno:123457, Named:'Waleed Ansari', shift:'Morning', Math:68, Physics:67, Chemistry:44,Computer:55,ObtainNumber:234,Totalmarks:400,Percentage:'58.5%'} 
    
   ]
+  constructor(private router : Router){
+    
+  }
+
+  navigatetoAddemployee(){
+    this.router.navigateByUrl("addemployee1")
+  }
 
   btncountryclick(event: any) {
     const selectedValue = event.target.value;
