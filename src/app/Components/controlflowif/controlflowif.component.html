@@ -1,0 +1,33 @@
+<div class="row">
+    <div>
+        <h4>You want to type your name here</h4>
+        <button (click)="btnclickname()">Yes</button>
+        @if (btnchk == true) { 
+            &nbsp;
+            <input type="text" [(ngModel)]="nametxtbox">
+            <h4>{{nametxtbox}}</h4>
+        }
+    </div>
+    <div>
+        <h4>Select your gender :</h4>
+        &nbsp;
+    <select name="chkgender" [(ngModel)]="chkgendercase">
+            <option value="select">select</option>
+            <option value="male">Male</option>
+            <option value="female">FeMale</option>
+            <option value="other">Other</option>
+        </select>
+        @if (chkgendercase=='male') {
+            <span>You are select {{chkgendercase}}</span>
+        }
+        @else if (chkgendercase=='female') {
+            <span>You are select {{chkgendercase}}</span>
+        }
+        @else if (chkgendercase=='other') {
+            <span>You are select {{chkgendercase}}</span>
+        }
+        @else {
+            <span>Currently you are unselect</span>
+        }
+    </div>
+</div>

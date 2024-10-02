@@ -5,6 +5,7 @@ import { DatabindingComponent } from './Components/databinding/databinding.compo
 import { EmployeeListComponent } from './Components/employee-list/employee-list.component';
 import { IforforeachComponent, IforforeachComponentfor } from './Components/iforforeach/iforforeach.component';
 import { RoutescomponentpageComponent } from './Components/routescomponentpage/routescomponentpage.component';
+import { ControlflowifComponent } from './Components/controlflowif/controlflowif.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +27,9 @@ export const routes: Routes = [
     {
         path: 'routepage' ,
         component: RoutescomponentpageComponent
+    },
+    {
+        path: 'controlif&elseif',
+        component: ControlflowifComponent
     }
 ];
