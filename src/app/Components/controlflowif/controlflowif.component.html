@@ -1,5 +1,5 @@
 <div class="row">
-    <div>
+    <div class="col-5">
         <h4>You want to type your name here</h4>
         <button (click)="btnclickname()">Yes</button>
         @if (btnchk == true) { 
@@ -8,7 +8,7 @@
             <h4>{{nametxtbox}}</h4>
         }
     </div>
-    <div>
+    <div class="col-5">
         <h4>Select your gender :</h4>
         &nbsp;
     <select name="chkgender" [(ngModel)]="chkgendercase">
@@ -17,6 +17,7 @@
             <option value="female">FeMale</option>
             <option value="other">Other</option>
         </select>
+        &nbsp;
         @if (chkgendercase=='male') {
             <span>You are select {{chkgendercase}}</span>
         }
@@ -31,3 +32,105 @@
         }
     </div>
 </div>
+<br>
+<div class="row">
+    <div class="col-5">
+        <ul>
+            @for (item of studentlistfor; track $index) {
+                <li>{{item}}</li>
+            }
+        </ul>
+    </div>
+    <div class="col-5">
+        <select name="arraylist" id="">
+            @for (item of studentlistfor; track $index) {
+                <option value="">{{item}}</option>
+            }
+        </select>
+    </div>
+    <div class="col-2">
+        @for (item of studentlistfor; track $index) {
+            <option value="">{{item}}</option>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-5">
+    <table class="table table-bordered">
+        <thead>
+            <th>Sno   </th>
+            <th>Id    </th>
+            <th>Named </th>
+            <th>shift </th>
+            <th>batch </th>
+            <th>Active</th>
+        </thead>
+        <tbody>
+            @for (item of detaillistofstdnt; track $index) {
+                <tr>
+                    <td>{{$index +1}}</td>
+                    <td>{{item.Id}}</td>
+                    <td>{{item.Named}}</td>
+                    <td>{{item.shift}}</td>
+                    <td>{{item.batch}}</td>
+                    <td>
+                        <span *ngIf="item.Active">Eligible</span>
+                        <span *ngIf="!item.Active">Not Eligible</span>
+                       </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="col-5">
+    <select name="listarray" id="listarraystd">
+        @for (item of detaillistofstdnt; track $index) {
+            <option [value]="item.Id">{{item.Named}}</option>
+        }        
+    </select>
+</div>
+</div>
+<br><br>    
+<div class="row">
+    <div class="col-4">
+        <h5>Enter your Batch ID here</h5>
+        <input type="text" [(ngModel)]="batchtxtget">        
+    </div>
+<div class="col-8">
+    @switch (batchtxtget) {
+        @case ('241224F') {
+            
+            <h5>Id:11, Named:'Saim Khan', shift:'Morning',batch:'241224F', Active: true</h5>
+        }
+        @case ('241226G') {
+            
+            <h5>Id:112, Named:'Faraz Shahab', shift:'Evening', batch:'241226G', Active: true</h5>
+        }
+        @case ('241235G') {
+            
+            <h5>Id:113, Named:'Asad Ali', shift:'Afternoon',   batch:'241235G', Active: false</h5>
+        }
+        @case ('241224F') {
+        
+            <h5>Id:114, Named:'Waqar Khan', shift:'Afternoon', batch:'241224F', Active: true</h5>
+        }
+        @case ('241226A') {
+            
+            <h5>Id:115, Named:'Sheikh Umer', shift:'morning',  batch:'241226A', Active: true</h5>
+        }
+        @case ('241224F') {
+            
+            <h5>Id:116, Named:'Taha Siddiqui', shift:'Evening',batch:'241224F', Active: false</h5>
+        } 
+        @case ('241226A') {
+            
+            <h5>Id:117, Named:'Faiq Khan', shift:'morning',    batch:'241226A', Active: true</h5>   
+        }
+        @default{
+            <h4>Data not available</h4>
+        }
+    }
+</div>
+</div>
+<a [routerLink]="['/if-foreach']">Go to home</a>
