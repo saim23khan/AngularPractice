@@ -6,6 +6,7 @@ import { EmployeeListComponent } from './Components/employee-list/employee-list.
 import { IforforeachComponent, IforforeachComponentfor } from './Components/iforforeach/iforforeach.component';
 import { RoutescomponentpageComponent } from './Components/routescomponentpage/routescomponentpage.component';
 import { ControlflowifComponent } from './Components/controlflowif/controlflowif.component';
+import { PagePipeComponent } from './Components/page-pipe/page-pipe.component';
 
 export const routes: Routes = [
     {
@@ -31,5 +32,9 @@ export const routes: Routes = [
     {
         path: 'controlif&elseif',
         component: ControlflowifComponent
+    },
+    {
+        path: 'page-pipe',
+        component: PagePipeComponent
     }
 ];
