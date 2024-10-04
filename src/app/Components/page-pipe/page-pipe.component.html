@@ -1,1 +1,70 @@
-<p>page-pipe works!</p>
+<div class="row">
+    <div class="col-3">
+        Before Pipe : {{uppercasevalue}}
+        <br>
+        After Pipe : {{uppercasevalue | uppercase}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{wordline}}
+        <br>
+        After Pipe : {{wordline | titlecase}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date:'dd-MM-yyy'}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date: 'dd/MMM/yyy'}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date:'dd-MMM-yyy'}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date}}
+    </div>
+    <div class="col-3">
+        Before Pipe : {{CurrentDate}}
+        <br>
+        After Pipe : {{CurrentDate | date:'dd-MM-yyyy'}}
+    </div>
+</div>
+<br><br>
+
+<div class="row">
+ <div class="col-6">
+    Before Pipe : {{namearray}}
+        <br>
+        After Pipe : {{namearray | json}}
+ </div>
+     <div class="col-6">
+       Before Pipe : {{currenttime}}
+           <br>
+           After Pipe : {{currenttime | async | date: 'hh:mm:ss'}}
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+       Before Pipe : {{currenttime}}
+           <br>
+           After Pipe : {{currenttime | async}}
+    </div>
+        <div class="col-6">
+          Before Pipe : {{currenttime}}
+              <br>
+              After Pipe : {{currenttime | async | date: 'hh:mm:ss'}}
+       </div>
+   </div>
