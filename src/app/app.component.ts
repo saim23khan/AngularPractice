@@ -5,12 +5,13 @@ import { EmployeeListComponent } from './Components/employee-list/employee-list.
 import { DatabindingComponent } from './Components/databinding/databinding.component';
 import { IforforeachComponent } from './Components/iforforeach/iforforeach.component';
 import { RoutescomponentpageComponent } from './Components/routescomponentpage/routescomponentpage.component';
+import { UserFoamPageComponent } from './Components/Forms/TemplatefoamPage/user-foam-page/user-foam-page.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,RouterLink,AddEmployeeComponent,EmployeeListComponent,DatabindingComponent,IforforeachComponent,RoutescomponentpageComponent],
+  imports: [UserFoamPageComponent,RouterOutlet,RouterLink,AddEmployeeComponent,EmployeeListComponent,DatabindingComponent,IforforeachComponent,RoutescomponentpageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

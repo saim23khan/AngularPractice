@@ -7,6 +7,7 @@ import { IforforeachComponent, IforforeachComponentfor } from './Components/ifor
 import { RoutescomponentpageComponent } from './Components/routescomponentpage/routescomponentpage.component';
 import { ControlflowifComponent } from './Components/controlflowif/controlflowif.component';
 import { PagePipeComponent } from './Components/page-pipe/page-pipe.component';
+import { UserFoamPageComponent } from './Components/Forms/TemplatefoamPage/user-foam-page/user-foam-page.component';
 
 export const routes: Routes = [
     {
@@ -36,5 +37,9 @@ export const routes: Routes = [
     {
         path: 'page-pipe',
         component: PagePipeComponent
+    },
+    {
+        path: 'foampage',
+        component : UserFoamPageComponent
     }
 ];
