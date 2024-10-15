@@ -1,97 +1,97 @@
 <h1>Add Info Detail:</h1>
 
 <div class="maindivnamesection">
-  
+
   <div id="divname">
     <h1>Name Section:</h1>
   </div>
   <div id="divnameallign">
-  <div>
-     <label class="lblname" id="firstname" [(ngModel)]="firstname" >First Name:</label> 
-     <input id="nameinputtxt" type="text" placeholder="Enter Your First Name">
+    <div>
+      <label class="lblname" id="firstname" [(ngModel)]="firstname">First Name:</label>
+      <input id="nameinputtxt" type="text" placeholder="Enter Your First Name">
+    </div>
+    <div>
+      <label class="lblname" id="middlename" [(ngModel)]="middlename">Middle Name:</label>
+      <input id="nameinputtxt2" type="text" placeholder="Enter Your Mid Name">
+    </div>
+    <div>
+      <label class="lblname" id="thirdname" [(ngModel)]="thirdname">Last Name:</label>
+      <input id="nameinputtxt" type="text" placeholder="Enter Your Last Name">
+    </div>
   </div>
-  <div>
-    <label class="lblname" id="middlename" [(ngModel)]="middlename" >Middle Name:</label> 
-    <input id="nameinputtxt2" type="text" placeholder="Enter Your Mid Name">
+  <div id="divname">
+    <h1>Details of Place:</h1>
   </div>
-  <div>
-    <label class="lblname" id="thirdname" [(ngModel)]="thirdname" >Last Name:</label> 
-    <input id="nameinputtxt" type="text" placeholder="Enter Your Last Name">
-  </div>  
-</div>
-<div id="divname">
-  <h1>Details of Place:</h1>
-</div>
-<div id="divdetailscontry">
-<div>
-  <label for="selectcountry">Select Country:</label>
-  <select name="Countryselect" id="pkcountryselect" (click)="btncountryclick($event)">
-    <option value="select">select</option>
-    <option value="pk">Pakistan</option>
-    <option value="ind">India</option>
-    <option value="uae">UAE</option>    
-    <option value="bd">BanglaDesh</option>
-  </select>
-</div>
-<div *ngIf="proviceselect">
-  <label for="provice">Select provice</label>
-  <select *ngIf="pkprovice" name="provice" id="proviceselectdiv">
-    <option value="select">select</option>
-    <option value="si">Sindh</option>
-    <option value="pj">Panjab</option>
-    <option value="kp">Khyber Pakhtoonkha</option>
-    <option value="bl">Balochistan</option>    
-  </select>
-  <select *ngIf="indprovice" name="provice" id="proviceselectdiv">
-    <option value="select">select</option>
-    <option value="dl">Dehli</option>
-    <option value="pb">Panjab</option>
-    <option value="bb">Bombay</option>
-    <option value="kk">kolkata</option>    
-  </select>
-  <select *ngIf="uaeprovice" name="provice" id="proviceselectdiv">
-    <option value="select">select</option>
-    <option value="dh">Dhabi</option>
-    <option value="du">Dubai</option>
-    <option value="sh">Sharjah</option>
-    <option value="aj">Ajman</option>    
-  </select>
-  <select *ngIf="banprovice" name="provice" id="proviceselectdiv">
-    <option value="select">select</option>
-    <option value="dk">Dhaka</option>
-    <option value="ch">Chittagong</option>
-    <option value="kh">Khulna</option>
-    <option value="ra">Rajshahi</option>    
-  </select>
-</div>
-<div>  
-  <label for="phonenumber">Phone NO:</label>
-  <!-- <label for="countrycode" *ngIf="countrydiv" ></label> -->
-  <input type="number" id="nameinputtxt" placeholder="{{countrycodelabel}}">
-</div>
-<div>
-  <label for="relegion">Relegion:</label>
-  <select id="proviceselectdiv">
-    <option  *ngFor="let rele of relegionoption">{{ rele }}</option>
-  </select>
-  <label for="">Branch :</label>
-  <select  id="branchcode">
-    <option *ngFor="let bran of branchlist" [value]="bran.Id">{{bran.LocationArea}}</option>
-  </select>
-</div>
-</div>
-<br>
-<div style="width: 100%;">
-  <button (click)="stddetailshow($event)" (dblclick)="stddetailnotshow($event)">Show Details</button>
-     <table *ngIf="showdetailbtn" class="table table-bordered">
+  <div id="divdetailscontry">
+    <div>
+      <label for="selectcountry">Select Country:</label>
+      <select name="Countryselect" id="pkcountryselect" (click)="btncountryclick($event)">
+        <option value="select">select</option>
+        <option value="pk">Pakistan</option>
+        <option value="ind">India</option>
+        <option value="uae">UAE</option>
+        <option value="bd">BanglaDesh</option>
+      </select>
+    </div>
+    <div *ngIf="proviceselect">
+      <label for="provice">Select provice</label>
+      <select *ngIf="pkprovice" name="provice" id="proviceselectdiv">
+        <option value="select">select</option>
+        <option value="si">Sindh</option>
+        <option value="pj">Panjab</option>
+        <option value="kp">Khyber Pakhtoonkha</option>
+        <option value="bl">Balochistan</option>
+      </select>
+      <select *ngIf="indprovice" name="provice" id="proviceselectdiv">
+        <option value="select">select</option>
+        <option value="dl">Dehli</option>
+        <option value="pb">Panjab</option>
+        <option value="bb">Bombay</option>
+        <option value="kk">kolkata</option>
+      </select>
+      <select *ngIf="uaeprovice" name="provice" id="proviceselectdiv">
+        <option value="select">select</option>
+        <option value="dh">Dhabi</option>
+        <option value="du">Dubai</option>
+        <option value="sh">Sharjah</option>
+        <option value="aj">Ajman</option>
+      </select>
+      <select *ngIf="banprovice" name="provice" id="proviceselectdiv">
+        <option value="select">select</option>
+        <option value="dk">Dhaka</option>
+        <option value="ch">Chittagong</option>
+        <option value="kh">Khulna</option>
+        <option value="ra">Rajshahi</option>
+      </select>
+    </div>
+    <div>
+      <label for="phonenumber">Phone NO:</label>
+      <!-- <label for="countrycode" *ngIf="countrydiv" ></label> -->
+      <input type="number" id="nameinputtxt" placeholder="{{countrycodelabel}}">
+    </div>
+    <div>
+      <label for="relegion">Relegion:</label>
+      <select id="proviceselectdiv">
+        <option *ngFor="let rele of relegionoption">{{ rele }}</option>
+      </select>
+      <label for="">Branch :</label>
+      <select id="branchcode">
+        <option *ngFor="let bran of branchlist" [value]="bran.Id">{{bran.LocationArea}}</option>
+      </select>
+    </div>
+  </div>
+  <br>
+  <div style="width: 100%;">
+    <button (click)="stddetailshow($event)" (dblclick)="stddetailnotshow($event)">Show Details</button>
+    <table *ngIf="showdetailbtn" class="table table-bordered">
       <thead>
-          <tr>
-            <th>S No</th>
-            <th>Student Name</th>
-            <th>Shift</th>
-            <th>Batch</th>
-            <th>Status</th>
-          </tr>
+        <tr>
+          <th>S No</th>
+          <th>Student Name</th>
+          <th>Shift</th>
+          <th>Batch</th>
+          <th>Status</th>
+        </tr>
       </thead>
       <tbody>
         <tr *ngFor="let stdname of studlist;let srNo = index">
@@ -102,30 +102,30 @@
           <td>
             <span *ngIf="stdname.Avtive">Eligible</span>
             <span *ngIf="!stdname.Avtive">Not Eligible</span>
-            </td>
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div style="width: 100%;">
-   <button (click)="marksreportshow($event)" (dblclick)="marksreportnotshow($event)">Show Result</button>
-   <table *ngIf="showbtn" class="table table-bordered">
-       <thead>
+    <button (click)="marksreportshow($event)" (dblclick)="marksreportnotshow($event)">Show Result</button>
+    <table *ngIf="showbtn" class="table table-bordered">
+      <thead>
         <tr>
-        <th>Roll No</th>
-        <th>Student Name</th>
-        <th>Shifts</th>
-        <th>Math</th>
-        <th>Physics</th>
-        <th>Chemistry</th>
-        <th>Computer</th>
-        <th>Obtain Marks</th>
-        <th>Total Number</th>
-        <th>Percentage</th>
-      </tr>
-       </thead>
-       <tbody>
+          <th>Roll No</th>
+          <th>Student Name</th>
+          <th>Shifts</th>
+          <th>Math</th>
+          <th>Physics</th>
+          <th>Chemistry</th>
+          <th>Computer</th>
+          <th>Obtain Marks</th>
+          <th>Total Number</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr *ngFor="let stdmarks of marklist">
           <td>{{stdmarks.rollno}}</td>
           <td>{{stdmarks.Named}}</td>
@@ -139,11 +139,9 @@
           <td [ngStyle]="{'background-color': getbackgroundcolor(stdmarks.Percentage)}">
             {{stdmarks.Percentage}}</td>
         </tr>
-       </tbody>
-   </table>
+      </tbody>
+    </table>
   </div>
 </div>
 
 <button (click)="navigatetoAddemployee()">Go to Add Employee Page</button>
-
-
